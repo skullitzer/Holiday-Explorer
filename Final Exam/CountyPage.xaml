@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Final_Exam.CountyPage">
+
+    <ContentPage.Resources>
+        <Style TargetType="ListView">
+            <Setter Property="SeparatorVisibility" Value="None" />
+            <Setter Property="BackgroundColor" Value="#F9F9F9" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="#3498DB" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="CornerRadius" Value="5" />
+            <Setter Property="WidthRequest" Value="100" />
+            <Setter Property="HeightRequest" Value="40" />
+        </Style>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <ListView x:Name="countyListView"
+                  ItemsSource="{Binding}">
+        </ListView>
+        <Button Text="Back" Clicked="OnBackClicked"/>
+    </StackLayout>
+
+</ContentPage>
